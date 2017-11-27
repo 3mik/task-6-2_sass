@@ -1,0 +1,30 @@
+$tundora: #4e4d4d;
+$cape-cod: #343635;
+$font-base-type: 'Open+Sans';
+$font-base-size: 14px;
+$font-base-color:$tundora;
+
+
+//grid variables
+$grid-columns: 12;
+$grid-max-width: 1200px;
+$gap: 6px;
+$col: col-width(); 
+
+//media-query variables
+
+$devices: xs, sm, md, lg;
+
+$bp-xsmall: 479px;
+$bp-small: 480px;
+$bp-medium: 769px;
+$bp-large: 1199px;
+
+
+
+//header variables
+
+$header-hight: 50px;
+$header-bc: $cape-cod;
+
+$hero-hight: 70vh;

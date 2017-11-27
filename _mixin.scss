@@ -1,0 +1,123 @@
+
+// media-query mixin
+
+@mixin phone {
+  @media (max-width: #{$bp-xsmall}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+    @media (min-width: #{$bp-small}) {
+      @content;
+    }
+  }
+  
+@mixin laptop {
+    @media (min-width: #{$bp-medium}) {
+      @content;
+    }
+  }
+
+@mixin desktop {
+    @media (min-width: #{$bp-large}) {
+      @content;
+    }
+  } 
+  
+  
+@mixin grid ($columns, $devices) {
+    @each $device in $devices {
+        @for $i from 1 through $columns {
+            .col-#{$device}-#{$i} {
+             width: $i * $col;
+            }
+        }
+    }
+      
+} 
+
+
+@mixin google-font ($font) {
+    $font: unquote($font);
+    @import url('https://fonts.googleapis.com/css?family=#{$font}:400,800');
+} 
+
+// grid mixin
+
+@mixin grid-plus ($columns, $devices) {
+  @each $device in $devices {
+    @if $device == 'sm' {
+      @include tablet {
+        @for $i from 1 through $columns {
+          .col-#{$device}-#{$i} {
+           width: $i * $col;
+          }
+        }
+      }
+    } @else if $device == 'md' {
+      @include laptop {
+        @for $i from 1 through $columns {
+          .col-#{$device}-#{$i} {
+           width: $i * $col;
+          }
+        }
+      }
+    } @else if $device == 'lg' {
+        @include desktop {
+          @for $i from 1 through $columns {
+            .col-#{$device}-#{$i} {
+             width: $i * $col;
+            }
+          }
+        }
+    }
+  }    
+} 
+
+
+// helper mixin
+
+// mixin dodaje linie do tekstu
+/*
+    $text-align
+        center - linia po obu stronach (default)
+        rigth, left - linia odpowiednio po jednej ze stron
+
+*/
+
+@mixin line-on-side (
+      $text-wrap-class: text-wrap,
+      $text-align: center,
+      $line-width: 95%,
+      $line-style: 1px solid #000,
+      $text-bgc: #fff,
+      $gap: 15px
+      ) {
+          text-align: $text-align;
+          position: relative;
+          z-index: 1;
+          &:before {
+            content: "";
+            position: absolute;
+            width: $line-width;
+            margin: 0 auto;
+            border-top: $line-style;
+            top: 50%;
+            right: 0;
+            left: 0;
+            //bottom: 0;
+            z-index: -1;
+          }
+          .#{$text-wrap-class} {
+            background-color: $text-bgc;
+            padding: 0 $gap;
+          }
+}
+
+// test dzialania
+.horizontal-line {
+  font-size: 33px;
+  text-transform: uppercase;
+  @include line-on-side($line-style: 4px double $line-color, $gap: 50px, $text-align: center);
+}

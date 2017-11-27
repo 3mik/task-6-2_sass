@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "media-query_in_sass_library.scss"
+    ],
+    "names": [],
+    "file": "media-query_in_sass_library.css"
+}

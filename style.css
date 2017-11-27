@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+
+html { font-size: 62.5%; } 
+
+body { 
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #4e4d4d;
+    margin: 0;
+    padding: 0;
+}
+
+h1   {
+    font-size: 24px;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+h2   {
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+h1, h2 {
+    color: #343635;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section > .container {
+    margin: 50px auto;
+}
+
+.row:after, .row:before {
+	content: "";
+	display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.col {
+	float: left;
+	min-height: 1px;
+	padding: 6px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.col-offset-0 {margin-left: 0;}
+.col-offset-1 {margin-left: 8.33%;}
+.col-offset-2 {margin-left: 16.66%;}
+.col-offset-3 {margin-left: 25%;}
+.col-offset-4 {margin-left: 33.33%;}
+.col-offset-5 {margin-left: 41.66%;}
+.col-offset-6 {margin-left: 50%;}
+.col-offset-7 {margin-left: 58.33%;}
+.col-offset-8 {margin-left: 66.66%;}
+.col-offset-9 {margin-left: 75%;}
+.col-offset-10 {margin-left: 83.33%;}
+.col-offset-11 {margin-left: 91.66%;}
+
+/* header style */
+
+header {
+    background-color: #343635;
+    height: 50px;
+}
+
+header img {
+    padding: 10px 0;
+}
+
+header nav ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;    
+}
+
+
+header nav li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color : #fff;
+}
+
+header nav li a:hover {
+    background-color: #1b1c1b;
+    color: #00C5E5;
+}
+
+/*     hero style    */
+
+.hero {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1002&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;    
+}
+
+.slogan {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px 30px;    
+}
+
+.slogan h1 {
+    color: #fff;
+}
+
+.slogan h1 span {
+    font-size: 2rem;
+    font-weight: normal;
+    display: block;
+}
+
+/* benefits style */
+
+.benefits {
+    text-align: center;
+}
+
+.benefits i{         
+    font-size: 11rem;
+}
+
+.benefits div.col-4:hover i,
+.benefits div.col-4:hover h1{
+    color: #00C5E5;
+    cursor: pointer;
+}
+
+/* feature style*/
+
+.feature {
+    text-align: center;
+}
+
+/* gallery style */
+
+.gallery .col-3 {
+    position: relative;    
+    padding: 0;
+    cursor: pointer;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.gallery i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.gallery i:first-child {
+    margin-right: 50px;
+}
+
+.gallery .inner-layer {
+  white-space: nowrap;            
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.gallery .layer {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: width .5s;    
+}
+
+
+.gallery .col:hover .layer {
+    width: 100%;
+}
+
+/* team style*/
+
+.team .col- {   
+    overflow: hidden;    
+}
+
+.team p {    
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.team .team-item {
+    position: relative;
+    margin: 0 auto;
+    background-image: url("http://via.placeholder.com/120x120");
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+            
+}
+
+.team-item:hover:after {
+    content: attr(title);
+    display: inline-block;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* promo style */
+
+.promo {
+    min-height: 250px;   
+    background-color: #fafafa;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    color: #fff;
+}
+
+.promo h1 {
+    color: #fff;
+} 
+
+.promo .col-4 {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+
+
+
+.promo .image-wrapper {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    bottom: -20px;
+    right: 20%;
+    border: 15px solid #343635;
+    border-radius: 20px;    
+  
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+.ad-text {
+    column-count: 2;
+    column-gap: 30px;
+}
+
+/* stats style  */
+
+.stats {
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+.stats h1 {
+    font-size: 5rem;
+}
+
+.stats p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00C3E8;
+}
+
+/* style info */
+
+.info {
+    background-color: #343635;
+    color: #fff;
+}
+
+.info .container {
+    margin-bottom: 0;
+}
+
+.info .container > .col {
+    padding-right: 10px;
+}
+
+.info .container > .col:last-child {
+    padding-right: 0;
+}
+
+
+.info h1, .info h2 {
+    color: #fff;
+}
+
+.info h1 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  line-height: 0.1rem;
+  margin-right: 10px;
+}
+
+.info h1:after {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  content: '';
+  width: 30%;
+  border-bottom: 5px solid #fff;
+}
+
+.contact p {
+    text-align: left;
+}
+
+.social {
+    position: relative;
+}
+
+.social-icon {
+    position: absolute;
+    right: 0;
+}
+
+.social i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 3px;
+    padding: 2px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #00C3E8;
+    font-size: 2rem;
+    
+}
+
+.social i:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #00C3E8 
+}
+
+/* author style */
+
+.author {
+    background-color: #292B2B;
+    color: #fff;    
+    
+}
+
+.author p {
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+    
+

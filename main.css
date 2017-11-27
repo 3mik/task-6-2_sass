@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
+.container:before,
+.row:before, .container:after,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.container:after,
+.row:after {
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: 'Open Sans', sans-serif;
+  color: #4e4d4d;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h1, h2 {
+  color: #343635;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.col {
+  float: left;
+  min-height: 1px;
+  padding: 6px;
+}
+
+[class*='col-'] {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .col-sm-1 {
+    width: 8.33333%;
+  }
+  .col-sm-2 {
+    width: 16.66667%;
+  }
+  .col-sm-3 {
+    width: 25%;
+  }
+  .col-sm-4 {
+    width: 33.33333%;
+  }
+  .col-sm-5 {
+    width: 41.66667%;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-7 {
+    width: 58.33333%;
+  }
+  .col-sm-8 {
+    width: 66.66667%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.33333%;
+  }
+  .col-sm-11 {
+    width: 91.66667%;
+  }
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .col-md-1 {
+    width: 8.33333%;
+  }
+  .col-md-2 {
+    width: 16.66667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-4 {
+    width: 33.33333%;
+  }
+  .col-md-5 {
+    width: 41.66667%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33333%;
+  }
+  .col-md-8 {
+    width: 66.66667%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-10 {
+    width: 83.33333%;
+  }
+  .col-md-11 {
+    width: 91.66667%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1199px) {
+  .col-lg-1 {
+    width: 8.33333%;
+  }
+  .col-lg-2 {
+    width: 16.66667%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33333%;
+  }
+  .col-lg-5 {
+    width: 41.66667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.33333%;
+  }
+  .col-lg-8 {
+    width: 66.66667%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.33333%;
+  }
+  .col-lg-11 {
+    width: 91.66667%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+
+/*=================================HEADER ===========================================*/
+header {
+  background-color: #343635;
+  text-align: center;
+}
+
+@media (min-width: 1199px) {
+  header {
+    height: 50px;
+  }
+}
+
+header img {
+  padding: 10px 0;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  /*float: right;
+            margin: 0;
+            padding: 0;*/
+}
+
+@media (min-width: 769px) {
+  header nav ul {
+    float: right;
+  }
+}
+
+header nav ul li {
+  display: block;
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 479px) {
+  header nav ul li:first-of-type {
+    border-top: 1px solid #fff;
+  }
+}
+
+@media (min-width: 769px) {
+  header nav ul li {
+    display: inline-block;
+    border-bottom: none;
+  }
+}
+
+header nav ul li a {
+  display: block;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+@media (min-width: 769px) {
+  header nav ul li a {
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+  header nav ul li a:hover {
+    background-color: #1b1c1b;
+    color: #00C5E5;
+  }
+}
+
+@media (min-width: 1199px) {
+  header nav ul li a {
+    font-size: 1.6rem;
+    padding: 0 20px;
+  }
+}
+
+/*=============================HERO ==========================================*/
+.hero {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1002&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.hero .slogan {
+  position: absolute;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px 30px;
+  top: 50%;
+}
+
+@media (max-width: 479px) {
+  .hero .slogan {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 480px) {
+  .hero .slogan {
+    width: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 769px) {
+  .hero .slogan {
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 1199px) {
+  .hero .slogan {
+    width: 60%;
+  }
+}
+
+.hero .slogan h1 {
+  color: #fff;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .hero .slogan h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero .slogan h1 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1199px) {
+  .hero .slogan h1 {
+    font-size: 3.6rem;
+  }
+}
+
+.hero .slogan h1 span {
+  display: block;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+@media (min-width: 480px) {
+  .hero .slogan h1 span {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1199px) {
+  .hero .slogan h1 span {
+    font-size: 3.2rem;
+  }
+}
+
+/*===================BENEFITS=================*/
+.benefits {
+  text-align: center;
+}
+
+.benefits i {
+  font-size: 11rem;
+}
+
+@media (min-width: 769px) {
+  .benefits i {
+    font-size: 9rem;
+  }
+}
+
+@media (min-width: 1199px) {
+  .benefits i {
+    font-size: 11rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .benefits i, .benefits h1 {
+    color: #00C5E5;
+  }
+}
+
+@media (min-width: 769px) {
+  .benefits div.col-lg-4:hover i,
+  .benefits div.col-lg-4:hover h1 {
+    color: #00C5E5;
+    cursor: pointer;
+  }
+}
+
+/*======================FEATURE==================================*/
+.feature {
+  text-align: center;
+}
+
+/*=========================GALLERY=================================*/
+.gallery [class*='col-'] {
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery i {
+  display: inline-block;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 5rem;
+}
+
+@media (min-width: 480px) {
+  .gallery i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 2.5rem;
+  }
+}
+
+.gallery i:first-child {
+  margin-right: 50px;
+}
+
+.gallery .inner-layer {
+  white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gallery .layer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .gallery .layer {
+    width: 0;
+    transition: width .5s;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (min-width: 769px) {
+  .gallery .col:hover .layer {
+    width: 100%;
+  }
+}
+
+/*===================TEAM=================*/
+.team .col {
+  overflow: hidden;
+}
+
+.team p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.team .team-item {
+  position: relative;
+  margin: 0 auto;
+  background-image: url("http://via.placeholder.com/120x120");
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+@media (min-width: 769px) {
+  .team .team-item:hover:after {
+    content: attr(title);
+    display: inline-block;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/*==============================PROMO=========================================================*/
+.promo {
+  min-height: 250px;
+  background-color: #fafafa;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  color: #fff;
+}
+
+.promo h1 {
+  color: #fff;
+}
+
+@media (max-width: 479px) {
+  .promo h1 {
+    display: none;
+  }
+}
+
+.promo .col-md-4 {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+@media (max-width: 479px) {
+  .promo .col-md-4 .inner {
+    padding: 2% 0 0 1%;
+  }
+  .promo .col-md-4:after {
+    position: absolute;
+    display: block;
+    float: right;
+    left: 65%;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "Your awesome";
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.promo .image-wrapper {
+  position: absolute;
+  border: 15px solid #343635;
+  border-radius: 20px;
+  width: 200px;
+  height: 250px;
+}
+
+@media (min-width: 480px) {
+  .promo .image-wrapper {
+    bottom: -20px;
+    right: 20%;
+  }
+}
+
+.promo .image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.promo .ad-text {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+/*==============================STATS================================================*/
+.stats {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stats h1 {
+  font-size: 5rem;
+}
+
+.stats p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00C3E8;
+}
+
+/*=================================INFO===========================================================*/
+.info {
+  background-color: #343635;
+  color: #fff;
+}
+
+.info .container {
+  margin-bottom: 0;
+}
+
+.info .container > .col {
+  padding-right: 10px;
+}
+
+.info .container > .col:last-child {
+  padding-right: 0;
+}
+
+.info h1, .info h2 {
+  color: #fff;
+}
+
+.info h1 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  line-height: 0.1rem;
+  margin-right: 10px;
+}
+
+/*.info h1:after {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 30%;
+  border-bottom: 5px solid #fff;
+}*/
+.contact p {
+  text-align: left;
+}
+
+.social {
+  position: relative;
+}
+
+.social-icon {
+  position: absolute;
+  right: 0;
+}
+
+.social i {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 3px;
+  padding: 2px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #00C3E8;
+  font-size: 2rem;
+}
+
+.social i:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #00C3E8;
+}
+
+.h-line {
+  position: relative;
+  /*z-index: 100;*/
+}
+
+hr {
+  background-color: white;
+  position: relative;
+  top: -10px;
+  height: 2px;
+  width: 80%;
+  margin-bottom: 50px;
+  z-index: 1;
+  /*&:after {
+        content: "logo";
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        width: 40px;
+        top: -10px;
+        color: #fff;
+        font-size: 1.6rem;
+        text-align: center;
+        
+        background-color: #343635; 
+    }*/
+}
+ 
+
+ /*# sourceMappingURL= main.css.map */
