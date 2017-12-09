@@ -1,4 +1,35 @@
+/*
+    $text-align
+        center - linia po obu stronach (default)
+        rigth, left - linia odpowiednio po jednej ze stron
+
+*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
+.horizontal-line {
+  font-size: 33px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.horizontal-line:before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  margin: 0 auto;
+  border-top: 4px double #000;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.horizontal-line .text-wrap {
+  background-color: #fff;
+  padding: 0 50px;
+}
+
 .container:before,
 .row:before, .container:after,
 .row:after {
@@ -59,7 +90,7 @@ h1, h2 {
   width: 100%;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 479px) and (max-width: 768px) {
   .col-sm-1 {
     width: 8.33333%;
   }
@@ -212,7 +243,7 @@ header nav ul li {
   border-bottom: 1px solid #fff;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 478px) {
   header nav ul li:first-of-type {
     border-top: 1px solid #fff;
   }
@@ -272,14 +303,14 @@ header nav ul li a {
   top: 50%;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 478px) {
   .hero .slogan {
     left: 50%;
     transform: translate(-50%, -50%);
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 479px) and (max-width: 768px) {
   .hero .slogan {
     width: 60%;
     left: 50%;
@@ -306,7 +337,7 @@ header nav ul li a {
   text-align: center;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 479px) and (max-width: 768px) {
   .hero .slogan h1 {
     font-size: 2.4rem;
     text-align: center;
@@ -331,7 +362,7 @@ header nav ul li a {
   font-size: 1rem;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 479px) and (max-width: 768px) {
   .hero .slogan h1 span {
     font-size: 2rem;
   }
@@ -364,7 +395,7 @@ header nav ul li a {
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 478px) {
   .benefits i, .benefits h1 {
     color: #00C5E5;
   }
@@ -407,7 +438,7 @@ header nav ul li a {
   font-size: 5rem;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 479px) and (max-width: 768px) {
   .gallery i {
     width: 40px;
     height: 40px;
@@ -501,7 +532,7 @@ header nav ul li a {
   color: #fff;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 478px) {
   .promo h1 {
     display: none;
   }
@@ -513,7 +544,7 @@ header nav ul li a {
   overflow: hidden;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 478px) {
   .promo .col-md-4 .inner {
     padding: 2% 0 0 1%;
   }
@@ -539,7 +570,7 @@ header nav ul li a {
   height: 250px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 479px) and (max-width: 768px) {
   .promo .image-wrapper {
     bottom: -20px;
     right: 20%;

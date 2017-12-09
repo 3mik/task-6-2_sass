@@ -10,16 +10,21 @@ $grid-columns: 12;
 $grid-max-width: 1200px;
 $gap: 6px;
 $col: col-width(); 
+$tablet-infix: "sm";
+$laptop-infix: "md";
+$desktop-infix: "lg";
+
 
 //media-query variables
 
-$devices: xs, sm, md, lg;
+$bp-small: 479;
+$bp-medium: 769;
+$bp-large: 1199;
 
-$bp-xsmall: 479px;
-$bp-small: 480px;
-$bp-medium: 769px;
-$bp-large: 1199px;
-
+$phone-bp-map:      (max: $bp-small - 1);
+$tablet-bp-map:     (min: $bp-small, max: $bp-medium - 1);
+$laptop-bp-map:     (min: $bp-medium);
+$desktop-bp-map:    (min: $bp-large);
 
 
 //header variables

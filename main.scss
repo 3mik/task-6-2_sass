@@ -59,7 +59,10 @@ h1, h2 {
     width: 100%; 
 }
 
-@include grid-plus ($grid-columns, $devices);
+@include grid ($grid-columns, $tablet-infix, $tablet-bp-map);
+@include grid ($grid-columns, $laptop-infix, $laptop-bp-map);
+@include grid ($grid-columns, $desktop-infix, $desktop-bp-map);
+
 
 
 /*=================================HEADER ===========================================*/
@@ -68,7 +71,7 @@ header {
     background-color: $header-bc;
     text-align: center;
 
-    @include desktop {
+    @include media-query ((), $desktop-bp-map) {
         height: $header-hight;
     }
     
@@ -83,7 +86,7 @@ header {
             margin: 0 auto; 
             padding: 0;        
 
-            @include laptop {
+            @include media-query((), $laptop-bp-map) {
                 float: right;
             }
             
@@ -96,13 +99,13 @@ header {
                 display: block;
                 border-bottom: 1px solid #fff;
 
-                @include phone {
+                @include media-query ((), $phone-bp-map) {
                     &:first-of-type {
                         border-top: 1px solid #fff;
                     }                
                 }
 
-                @include laptop {
+                @include media-query((), $laptop-bp-map) {
                     display: inline-block;
                     border-bottom: none;
                 }
@@ -114,7 +117,7 @@ header {
                     text-transform: uppercase;
                     font-size: 1.2rem;
                     color: #fff; 
-                    @include laptop {
+                    @include media-query((), $laptop-bp-map) {
                         padding: 0 10px;
                         font-size: 1rem;
                         &:hover {
@@ -123,7 +126,7 @@ header {
                         }
 
                     }
-                    @include desktop {
+                    @include media-query((), $desktop-bp-map) {
                         font-size: 1.6rem;                        
                         padding: 0 20px;
                     }
@@ -151,23 +154,23 @@ header {
         padding: 15px 30px; 
         top: 50%;
 
-        @include phone {
+        @include media-query((), $phone-bp-map) {
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
-        @include tablet {
+        @include media-query((), $tablet-bp-map) {
             width: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
-        @include laptop {
+        @include media-query((), $laptop-bp-map) {
             right: 0;
             transform: translateY(-50%);
         }
         
-        @include desktop {
+        @include media-query((), $desktop-bp-map) {
             width: 60%;
         }
 
@@ -175,14 +178,14 @@ header {
             color: #fff;
             font-size: 1.4rem;
             text-align: center;
-            @include tablet {
+            @include media-query((), $tablet-bp-map) {
                 font-size: 2.4rem;
                 text-align: center;
             }
-            @include laptop {
+            @include media-query((), $laptop-bp-map) {
                 text-align: left;
             }
-            @include desktop {
+            @include media-query((), $desktop-bp-map) {
                 font-size: 3.6rem;
             }
             
@@ -190,10 +193,10 @@ header {
                 display: block;
                 font-weight: normal;                
                 font-size: 1rem;
-                @include tablet {
+                @include media-query((), $tablet-bp-map) {
                     font-size: 2rem;
                 }
-                @include desktop {
+                @include media-query((), $desktop-bp-map) {
                     font-size: 3.2rem;
                 }
 
@@ -209,21 +212,20 @@ header {
     
     i {
         font-size: 11rem;
-        @include laptop {
+        @include media-query((), $laptop-bp-map) {
             font-size: 9rem;
         }
-        @include desktop {
+        @include media-query((), $desktop-bp-map) {
             font-size: 11rem;
         }
     }
 
-    @include phone {
+    @include media-query((), $phone-bp-map) {
         i, h1 {
             color: #00C5E5;
         }
     }
-
-    @include laptop {
+    @include media-query((), $laptop-bp-map) {
         div.col-lg-4:hover i,
         div.col-lg-4:hover h1{
             color: #00C5E5;
@@ -268,7 +270,7 @@ header {
         height: 60px;
         line-height: 60px;
         font-size: 5rem;
-        @include tablet {
+        @include media-query((), $tablet-bp-map) {
             width: 40px;
             height: 40px;
             line-height: 40px;
@@ -296,7 +298,7 @@ header {
         overflow: hidden;
         height: 100%;
         width: 100%;
-        @include laptop {
+        @include media-query((), $laptop-bp-map) {
             width: 0;
             transition: width .5s;
             background-color: rgba(0, 0, 0, 0.6) 
@@ -304,7 +306,7 @@ header {
            
     }
     
-    @include laptop {
+    @include media-query((), $laptop-bp-map) {
         .col {
             &:hover {
                 .layer {
@@ -339,7 +341,7 @@ header {
         border-radius: 50%;                
     }
 
-    @include laptop {
+    @include media-query((), $laptop-bp-map) {
         .team-item {
             &:hover {
                 &:after {
@@ -375,7 +377,7 @@ header {
 
     h1 {
        color: #fff;
-       @include phone {            
+       @include media-query((), $phone-bp-map) {            
             display: none;            
        }
     }
@@ -384,7 +386,7 @@ header {
         position: relative;
         min-height: 300px;
         overflow: hidden;
-        @include phone {
+        @include media-query((), $phone-bp-map) {
             .inner {
                 padding: 2% 0 0 1%;
             }
@@ -411,7 +413,7 @@ header {
         width: 200px;
         height: 250px;
 
-        @include tablet {
+        @include media-query((), $tablet-bp-map) {
             bottom: -20px;
             right: 20%;
         }

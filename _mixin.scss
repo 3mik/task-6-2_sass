@@ -1,42 +1,46 @@
 
 // media-query mixin
 
-@mixin phone {
-  @media (max-width: #{$bp-xsmall}) {
-    @content;
-  }
-}
-
-@mixin tablet {
-    @media (min-width: #{$bp-small}) {
-      @content;
-    }
-  }
+@mixin media-query ($css-map, $query-map) {
+  $_min: 0;
+  $_max: 0;
   
-@mixin laptop {
-    @media (min-width: #{$bp-medium}) {
-      @content;
-    }
-  }
-
-@mixin desktop {
-    @media (min-width: #{$bp-large}) {
-      @content;
-    }
+  @if map-has-key($query-map, "min") {
+    $_min: map-get($query-map, "min"); 
+    
   } 
+  @if map-has-key($query-map, "max") {
+    $_max: map-get($query-map, "max");
+  }
   
-  
-@mixin grid ($columns, $devices) {
-    @each $device in $devices {
-        @for $i from 1 through $columns {
-            .col-#{$device}-#{$i} {
-             width: $i * $col;
-            }
-        }
+  @if $_min == 0 and $_max == 0 {
+    @error "$min and $max may not be zero at the same time. Asign a value to at least one parameter.";
+  }; 
+  @if $_min > 0 and $_max > 0 {
+    @media (min-width: #{$_min + 'px'}) and (max-width: #{$_max + 'px'}) {
+      @each $property, $value in $css-map {
+        #{$property}: $value
+      }        
+      @content;
     }
-      
+  }
+  @if $_min > 0 and $_max == 0 {
+    @media (min-width: #{$_min + 'px'}) {
+      @each $property, $value in $css-map {
+        #{$property}: $value 
+      }        
+      @content;
+     }
+  }
+  @if $_min == 0 and $_max > 0 {
+    @media (max-width: #{$_max + 'px'}) {
+      @each $property, $value in $css-map {
+        #{$property}: $value 
+      }
+      @content;
+    }
+  }
 } 
-
 
 @mixin google-font ($font) {
     $font: unquote($font);
@@ -45,35 +49,15 @@
 
 // grid mixin
 
-@mixin grid-plus ($columns, $devices) {
-  @each $device in $devices {
-    @if $device == 'sm' {
-      @include tablet {
-        @for $i from 1 through $columns {
-          .col-#{$device}-#{$i} {
-           width: $i * $col;
-          }
-        }
+@mixin grid ($columns, $devices-infix, $breakpoint-map) {
+  @include media-query((), $breakpoint-map) {
+    @for $i from 1 through $columns {
+      .col-#{$devices-infix}-#{$i} {
+        width: $i * $col;
       }
-    } @else if $device == 'md' {
-      @include laptop {
-        @for $i from 1 through $columns {
-          .col-#{$device}-#{$i} {
-           width: $i * $col;
-          }
-        }
-      }
-    } @else if $device == 'lg' {
-        @include desktop {
-          @for $i from 1 through $columns {
-            .col-#{$device}-#{$i} {
-             width: $i * $col;
-            }
-          }
-        }
     }
-  }    
-} 
+  }
+}
 
 
 // helper mixin
@@ -119,5 +103,5 @@
 .horizontal-line {
   font-size: 33px;
   text-transform: uppercase;
-  @include line-on-side($line-style: 4px double $line-color, $gap: 50px, $text-align: center);
+  @include line-on-side($line-style: 4px double #000, $gap: 50px, $text-align: center);
 }
