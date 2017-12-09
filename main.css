@@ -5,31 +5,6 @@
 
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
-.horizontal-line {
-  font-size: 33px;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-.horizontal-line:before {
-  content: "";
-  position: absolute;
-  width: 95%;
-  margin: 0 auto;
-  border-top: 4px double #000;
-  top: 50%;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.horizontal-line .text-wrap {
-  background-color: #fff;
-  padding: 0 50px;
-}
-
 .container:before,
 .row:before, .container:after,
 .row:after {
@@ -662,80 +637,142 @@ header nav ul li a {
   color: #fff;
 }
 
-.info h1 {
-  position: relative;
-  width: 100%;
-  text-align: left;
-  line-height: 0.1rem;
-  margin-right: 10px;
+.info h2 {
+  font-size: 2rem;
 }
 
-/*.info h1:after {
+@media (min-width: 769px) {
+  .info h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1199px) {
+  .info h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.info p {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 769px) {
+  .info p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1199px) {
+  .info p {
+    font-size: 1.4rem;
+  }
+}
+
+.info h1.horizontal-line {
+  text-align: center;
+  position: relative;
   z-index: 1;
+  width: 100%;
+  text-align: center;
+  line-height: 0.1rem;
+}
+
+.info h1.horizontal-line:before {
+  content: "";
   position: absolute;
+  width: 95%;
+  margin: 0 auto;
+  border-top: 4px double #fff;
+  top: 50%;
+  right: 0;
   left: 0;
-  content: '';
-  width: 30%;
-  border-bottom: 5px solid #fff;
-}*/
-.contact p {
-  text-align: left;
+  z-index: -1;
 }
 
-.social {
-  position: relative;
+.info h1.horizontal-line .text-wrap {
+  background-color: #343635;
+  padding: 0 50px;
 }
 
-.social-icon {
-  position: absolute;
+@media (min-width: 769px) {
+  .info h1.horizontal-line {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    font-size: 2rem;
+  }
+  .info h1.horizontal-line:before {
+    content: "";
+    position: absolute;
+    width: 95%;
+    margin: 0 auto;
+    border-top: 2px solid #fff;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .info h1.horizontal-line .text-wrap {
+    background-color: #343635;
+    padding: 0 5px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .info h1.horizontal-line {
+    font-size: 1.8rem;
+  }
+}
+
+.info .contact p {
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .info .social {
+    position: relative;
+  }
+}
+
+.info .social .social-icon {
+  text-align: right;
   right: 0;
 }
 
-.social i {
+@media (min-width: 769px) {
+  .info .social .social-icon {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.info .social i {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 3px;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
   padding: 2px;
-  line-height: 30px;
+  line-height: 40px;
   text-align: center;
   color: #fff;
   background-color: #00C3E8;
   font-size: 2rem;
 }
 
-.social i:hover {
+@media (min-width: 769px) {
+  .info .social i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+.info .social i:hover {
   cursor: pointer;
   background-color: #fff;
   color: #00C3E8;
-}
-
-.h-line {
-  position: relative;
-  /*z-index: 100;*/
-}
-
-hr {
-  background-color: white;
-  position: relative;
-  top: -10px;
-  height: 2px;
-  width: 80%;
-  margin-bottom: 50px;
-  z-index: 1;
-  /*&:after {
-        content: "logo";
-        display: block;
-        position: relative;
-        margin: 0 auto;
-        width: 40px;
-        top: -10px;
-        color: #fff;
-        font-size: 1.6rem;
-        text-align: center;
-        
-        background-color: #343635; 
-    }*/
 }
  
 

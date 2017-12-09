@@ -98,10 +98,3 @@
             padding: 0 $gap;
           }
 }
-
-// test dzialania
-.horizontal-line {
-  font-size: 33px;
-  text-transform: uppercase;
-  @include line-on-side($line-style: 4px double #000, $gap: 50px, $text-align: center);
-}
