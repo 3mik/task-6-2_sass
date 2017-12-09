@@ -340,20 +340,23 @@ header {
     p {    
         text-align: center;
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .team-item {
         position: relative;
         margin: 0 auto;
-        background-image: url("http://via.placeholder.com/120x120");
-        width: 120px;
-        height: 120px;
+        background-image: url("http://via.placeholder.com/240x240");
+        width: 240px;
+        height: 240px;
         border-radius: 50%;                
     }
 
     @include media-query((), $laptop-bp-map) {
         .team-item {
+            background-image: url("http://via.placeholder.com/120x120");
+            width: 120px;
+            height: 120px;
             &:hover {
                 &:after {
                     content: attr(title);
