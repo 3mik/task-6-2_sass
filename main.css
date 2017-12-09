@@ -551,6 +551,12 @@ header nav ul li a {
   }
 }
 
+@media (min-width: 479px) and (max-width: 768px) {
+  .promo h1 {
+    display: none;
+  }
+}
+
 .promo .col-md-4 {
   position: relative;
   min-height: 300px;
@@ -559,7 +565,7 @@ header nav ul li a {
 
 @media (max-width: 478px) {
   .promo .col-md-4 .inner {
-    padding: 2% 0 0 1%;
+    padding: 1% 0 0 1%;
   }
   .promo .col-md-4:after {
     position: absolute;
@@ -575,6 +581,24 @@ header nav ul li a {
   }
 }
 
+@media (min-width: 479px) and (max-width: 768px) {
+  .promo .col-md-4 .inner {
+    padding: 2% 0 0 1%;
+  }
+  .promo .col-md-4:after {
+    position: absolute;
+    display: block;
+    float: right;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "Your awesome";
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
 .promo .image-wrapper {
   position: absolute;
   border: 15px solid #343635;
@@ -583,7 +607,7 @@ header nav ul li a {
   height: 250px;
 }
 
-@media (min-width: 479px) and (max-width: 768px) {
+@media (min-width: 769px) {
   .promo .image-wrapper {
     bottom: -20px;
     right: 20%;

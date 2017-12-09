@@ -394,6 +394,10 @@ header {
        @include media-query((), $phone-bp-map) {            
             display: none;            
        }
+
+       @include media-query((), $tablet-bp-map) {            
+        display: none;            
+   }
     }
 
     .col-md-4 {
@@ -402,7 +406,7 @@ header {
         overflow: hidden;
         @include media-query((), $phone-bp-map) {
             .inner {
-                padding: 2% 0 0 1%;
+                padding: 1% 0 0 1%;
             }
             &:after {
                 position: absolute;
@@ -417,6 +421,24 @@ header {
                 text-transform: uppercase;
             }
         }
+       
+        @include media-query((), $tablet-bp-map) {
+            .inner {
+                padding: 2% 0 0 1%;
+            }
+            &:after {
+                position: absolute;
+                display: block;
+                float: right;
+                left: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "Your awesome";
+                font-size: 2.6rem;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
 
     }
 
@@ -427,10 +449,11 @@ header {
         width: 200px;
         height: 250px;
 
-        @include media-query((), $tablet-bp-map) {
+        @include media-query((), $laptop-bp-map) {
             bottom: -20px;
-            right: 20%;
+            right: 20%; 
         }
+
         img {
             width: 100%;
             height: 100%;
