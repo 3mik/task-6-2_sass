@@ -38,6 +38,14 @@ h1, h2 {
     color: #343635;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
+
 .container,
 .row {
     @extend %clearfix;
@@ -490,6 +498,7 @@ header {
 /*=================================INFO===========================================================*/
 
 .info {
+    padding: 10px;
     background-color: #343635;
     color: #fff;
     
@@ -520,7 +529,7 @@ header {
     }
 
     h1.horizontal-line {
-        @include line-on-side ($line-style: 4px double #fff, $gap: 50px, $text-align: center, $text-bgc: #343635);  
+        @include line-on-side ($line-style: 4px double #fff, $gap: 5px, $text-align: center, $text-bgc: #343635);  
         width: 100%;
         text-align: center;
         line-height: 0.1rem;
@@ -576,4 +585,16 @@ header {
         }
     }
 
+}
+
+.author {
+    background-color: rgb(34, 31, 31);
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+     
 }

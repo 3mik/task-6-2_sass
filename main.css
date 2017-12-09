@@ -49,6 +49,14 @@ h1, h2 {
   color: #343635;
 }
 
+section {
+  margin-bottom: 30px;
+}
+
+section:last-of-type {
+  margin-bottom: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -617,6 +625,7 @@ header nav ul li a {
 
 /*=================================INFO===========================================================*/
 .info {
+  padding: 10px;
   background-color: #343635;
   color: #fff;
 }
@@ -692,7 +701,7 @@ header nav ul li a {
 
 .info h1.horizontal-line .text-wrap {
   background-color: #343635;
-  padding: 0 50px;
+  padding: 0 5px;
 }
 
 @media (min-width: 769px) {
@@ -773,6 +782,18 @@ header nav ul li a {
   cursor: pointer;
   background-color: #fff;
   color: #00C3E8;
+}
+
+.author {
+  background-color: #221f1f;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.author p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
  
 
