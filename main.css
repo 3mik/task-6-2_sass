@@ -403,9 +403,15 @@ header nav ul li a {
   }
 }
 
+@media (min-width: 479px) and (max-width: 768px) {
+  .benefits i, .benefits h1 {
+    color: #00C5E5;
+  }
+}
+
 @media (min-width: 769px) {
-  .benefits div.col-lg-4:hover i,
-  .benefits div.col-lg-4:hover h1 {
+  .benefits div.col-md-4:hover i,
+  .benefits div.col-md-4:hover h1 {
     color: #00C5E5;
     cursor: pointer;
   }

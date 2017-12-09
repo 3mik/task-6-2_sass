@@ -230,9 +230,15 @@ header {
             color: #00C5E5;
         }
     }
+
+    @include media-query((), $tablet-bp-map) {
+        i, h1 {
+            color: #00C5E5;
+        }
+    }
     @include media-query((), $laptop-bp-map) {
-        div.col-lg-4:hover i,
-        div.col-lg-4:hover h1{
+        div.col-md-4:hover i,
+        div.col-md-4:hover h1{
             color: #00C5E5;
             cursor: pointer;
         }
